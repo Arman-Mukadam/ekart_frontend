@@ -1,0 +1,32 @@
+<div class="ekart--product--container">
+    <!-- <img [src]="product.pImage" alt="">
+    <p>Name : {{product.name}}</p>
+    <p>Price : ₹ {{product.price}}</p>
+    <p>Color : {{product.color}}</p>
+    <p>Discounted Price : {{getDiscountedPrice().toFixed(2)}}</p>
+    <p>Stock : {{product.inStock >0 ? "only " + product.inStock + " items left":"Out Of Stock"}}</p>
+    <button [disabled]="!(product.inStock > 0)">Buy Now</button>
+    <button (click)="decreamentCartValue()" [disabled]="addToCart===0">-</button>
+    <span>{{addToCart}}</span>
+    <button (click)="increamentCartValue()" [disabled]="addToCart === product.inStock">+</button>
+    <button bind-disabled="!(product.inStock > 0)">Buy Now</button>
+    <input type="" name="" [value]="name" (input)="onNameChange($event)">
+    <p>{{name}}</p>
+    <input type="" name="" bind-value="name">
+    <input [value]="name" [attr.aria-hidden]="name"> -->
+    <app-search (onSearchTextChanged)="setSearchText($event)"></app-search>
+    <!-- <div>
+        @for (item of listOfString; track item ; let i=$index) {
+        <ul>
+            <li>Current element of array {{i}}---{{item}}</li>
+        </ul>
+        } @empty {
+        <p>Empty list of fruits</p>
+        }
+    </div> -->
+    <product-list [searchText]="searchText" #productListComponent></product-list>
+    @if(productListComponent.selectedProduct){
+    <product-detail></product-detail>
+    }
+
+</div>
