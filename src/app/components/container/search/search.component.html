@@ -1,14 +1,14 @@
 <div class="ekart--search--product">
-  <input class="ekart-search-product-input" #searchInput>
-  <!-- <input class="ekart-search-product-input" [(ngModel)]="searchText" (input)="SearchTextChanged()"> -->
-  <!-- ngClass Directive is an attribute directive which allow us to add or remove css classes to or from an HTML element dynamically, based on some Typescript Expression -->
-  <button [ngClass]="{'btn':true,'btn-search':searchText,'btn-search-disabled':!searchText}" [disabled]="!searchText"
-      (click)="updateSearchText()">Search</button>
+  <div class="input-and-button">
+    <ion-input color="dark" label-placement="floating" fill="outline" class="ekart-search-product-input" #searchInput></ion-input>
+    <ion-button color="dark" [ngClass]="{'btn':true,'btn-search':searchText,'btn-search-disabled':!searchText}"
+      [disabled]="!searchText" (click)="updateSearchText()">Search</ion-button>
+  </div>
 </div>
 <div>
   @if(searchText !=""){
   <div class="ekart-search-result-for">
-      <p><strong>Search result for:</strong>{{searchText}}</p>
+    <p><strong>Search result for:</strong>{{searchText}}</p>
   </div>
   }
 </div>

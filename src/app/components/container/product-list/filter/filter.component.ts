@@ -1,12 +1,13 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { IonRadioGroup, IonRadio } from "@ionic/angular/standalone";
 
 @Component({
   selector: 'filter',
   templateUrl: './filter.component.html',
   styleUrls: ['./filter.component.scss'],
   standalone: true,
-  imports:[FormsModule]
+  imports: [IonRadio, IonRadioGroup, FormsModule]
 })
 export class FilterComponent implements OnInit {
 

@@ -10,7 +10,7 @@ import { RouterLink } from '@angular/router';
 })
 export class TopMenuComponent implements OnInit {
 
-  topMenus: string[] = ["Help", "Exchange & Returns", "Order Tracker", "SignUp / Login"]
+  
 
   constructor() { }
 

@@ -3,7 +3,11 @@
     padding: 0px 20vh;
 }
 
-input[type=radio] {
-    margin-left: 10px;
-    margin-right: 5px;
+
+:host .label-text-wrapper {
+    margin-inline: 5px 0px !important;
+}
+
+ion-radio {
+    margin-right: 10px;
 }

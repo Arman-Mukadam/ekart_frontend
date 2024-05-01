@@ -1,10 +1,53 @@
 .ekart-menu {
-    padding-top: 2vh;
-    padding: 1vh 1vh;
     color: #36454F;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: normal;
     font-size: 14px;
-    // width: 70%;
-    text-align: center;
+}
+
+ion-button {
+    text-transform: capitalize !important;
+}
+
+.ekart-submenu {
+    font-size: 14px;
+}
+
+.ekart-logo {
+    font-size: 40px;
+    font-weight: bold;
+    color: #36454F;
+    font-family: 'Concert One', cursive;
+}
+
+.header {
+    border-bottom: #E5E4E2 1.5px solid;
+    padding: 5px 0;
+}
+
+@media(max-width:992px) {
+    .header {
+        display: none;
+    }
+
+    .mobile-header {
+        display: block;
+    }
+}
+
+@media(min-width:992px) {
+    .header {
+        display: block;
+    }
+
+    .mobile-header {
+        display: none;
+    }
+}
+
+.mobile-header {
+    ion-content {
+        ion-button {
+            display: block;
+            margin: 10px 0;
+        }
+    }
 }

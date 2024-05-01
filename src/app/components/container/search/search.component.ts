@@ -1,12 +1,13 @@
 import { NgClass } from '@angular/common';
 import { Component, ElementRef, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
+import { IonButton, IonInput } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.scss'],
   standalone: true,
-  imports: [NgClass]
+  imports: [IonInput, NgClass,IonButton]
 })
 export class SearchComponent implements OnInit {
   searchText: string = "";
