@@ -1,6 +1,7 @@
 .filter-container {
     margin: 10px 0px;
     padding: 0px 20vh;
+    display: flex;
 }
 
 
@@ -10,4 +11,11 @@
 
 ion-radio {
     margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .filter-container {
+        padding: 0px 10px;
+    }
+
 }
