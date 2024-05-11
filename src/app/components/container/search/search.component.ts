@@ -7,7 +7,7 @@ import { IonButton, IonInput } from '@ionic/angular/standalone';
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.scss'],
   standalone: true,
-  imports: [IonInput, NgClass,IonButton]
+  imports: [IonInput, NgClass, IonButton]
 })
 export class SearchComponent implements OnInit {
   searchText: string = "";

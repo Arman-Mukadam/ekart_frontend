@@ -26,7 +26,7 @@
     </div> -->
     <product-list [searchText]="searchText" #productListComponent></product-list>
     @if(productListComponent.selectedProduct){
-    <product-detail></product-detail>
+    <product-detail [productListComp]="productListComponent"></product-detail>
     }
 
 </div>

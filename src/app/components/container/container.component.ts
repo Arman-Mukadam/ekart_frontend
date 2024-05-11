@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { SearchComponent } from "./search/search.component";
 import { ProductListComponent } from "./product-list/product-list.component";
 import { ProductDetailComponent } from "./product-detail/product-detail.component";
@@ -14,10 +14,11 @@ export class ContainerComponent implements OnInit {
   listOfString: string[] = ["Mark", "Steve", "Bob", "Harry"]
 
   searchText: string = '';
+  @ViewChild(ProductListComponent) productListComponent!: ProductListComponent;
   constructor() { }
 
   ngOnInit() { }
-  
+
   setSearchText(val: any) {
     this.searchText = val;
   }
