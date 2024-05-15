@@ -1,6 +1,7 @@
 import { NgStyle } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
-import { IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonTitle, IonCardTitle } from '@ionic/angular/standalone';
+import { IonicModule } from '@ionic/angular';
+import { IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonTitle, IonCardTitle, IonCol, IonGrid, IonRow } from '@ionic/angular/standalone';
 import { Product } from 'src/models/Product';
 
 @Component({
@@ -8,7 +9,7 @@ import { Product } from 'src/models/Product';
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.scss'],
   standalone: true,
-  imports: [NgStyle, IonCard, IonCardHeader, IonCardContent, IonTitle, IonCardSubtitle, IonCardTitle]
+  imports: [IonicModule,NgStyle]
 })
 export class ProductComponent implements OnInit {
   @Input() product!: Product;

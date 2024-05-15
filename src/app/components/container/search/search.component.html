@@ -1,8 +1,9 @@
 <div class="ekart--search--product">
   <div class="input-and-button">
-    <ion-input color="dark" label-placement="floating" fill="outline" class="ekart-search-product-input" #searchInput></ion-input>
+    <ion-input color="dark" label-placement="floating" fill="outline" class="ekart-search-product-input" #searchInput
+      [(ngModel)]="searchText"></ion-input>
     <ion-button color="dark" [ngClass]="{'btn':true,'btn-search':searchText,'btn-search-disabled':!searchText}"
-      [disabled]="!searchText" (click)="updateSearchText()">Search</ion-button>
+      [disabled]="!searchText" (click)="updateSearchText(searchInput.value)">Search</ion-button>
   </div>
 </div>
 <div>

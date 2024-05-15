@@ -3,7 +3,7 @@
         <i class="fa fa-times" aria-hidden="true"></i>
     </div>
     <div class="ekart-product-detail-image">
-        <img [src]="product.imageURL" class="ekart-product-detail-image">
+        <ion-img [src]="product.imageURL" class="ekart-product-detail-image"></ion-img>
     </div>
 
     <div class="ekart-product-detail">
@@ -19,7 +19,13 @@
             <p>
                 <b>Price Each Pair:</b>
                 <span style="background-color: red; color:white"><s>${{product.price}}</s></span>
-                <span style="background-color: green; color:white">${{product.discountPrice}}</span> (Inclusive of all
+                @if (product.discountPrice) {
+                <span style="background-color: green; color:white">${{product.discountPrice}}</span>
+                }
+                @else {
+                    No discount Available
+                }
+                (Inclusive of all
                 taxes)
             </p>
         </div>
@@ -55,7 +61,13 @@
         </div>
     </div>
     <div class="ekart-product-detail-addtoCart">
-        <button class="btn-add-to-cart">ADD TO CART</button>
+        @if (product.is_in_inventory) {
+        <ion-button class="btn-add-to-cart">ADD TO CART</ion-button>
+        }
+        @else {
+        <ion-button class="btn-add-to-cart">Notify Me</ion-button>
+
+        }
     </div>
 </div>
 <div class="overlay"></div>

@@ -7,11 +7,19 @@
     <product [product]="product"></product>
     }
     } -->
-  @for(product of products;track product.id){
-  <div (click)="selectedProduct=product">
-    @if(searchText === '' || product.name.toLowerCase().includes(searchText.toLowerCase())){
-    <product [product]="product"></product>
-    }
-  </div>
-  }
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      @for(product of products;track product.id){
+      <ion-col size="auto">
+        <ng-container (click)="selectedProduct=product">
+          @if(product.name.toLowerCase().includes(searchText.toLowerCase())){
+          <product [product]="product"></product>
+          }@else{
+          No product found
+          }
+        </ng-container>
+      </ion-col>
+      }
+    </ion-row>
+  </ion-grid>
 </div>

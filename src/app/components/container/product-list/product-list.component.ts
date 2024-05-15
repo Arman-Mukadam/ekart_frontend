@@ -2,13 +2,14 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Product } from 'src/models/Product';
 import { FilterComponent } from "./filter/filter.component";
 import { ProductComponent } from "./product/product.component";
+import { IonCol, IonGrid, IonRow } from "@ionic/angular/standalone";
 
 @Component({
-    selector: 'product-list',
-    templateUrl: './product-list.component.html',
-    styleUrls: ['./product-list.component.scss'],
-    standalone: true,
-    imports: [FilterComponent, ProductComponent]
+  selector: 'product-list',
+  templateUrl: './product-list.component.html',
+  styleUrls: ['./product-list.component.scss'],
+  standalone: true,
+  imports: [IonGrid, FilterComponent, ProductComponent, IonRow, IonCol]
 })
 export class ProductListComponent implements OnInit {
   @Input() searchText: string = ''
@@ -16,7 +17,10 @@ export class ProductListComponent implements OnInit {
   selectedProduct!: Product;
   constructor() { }
 
-  ngOnInit() { }
+  ngOnInit() {
+
+  }
+
 
 
   products = [
@@ -28,7 +32,7 @@ export class ProductListComponent implements OnInit {
       gender: "MEN",
       category: "RUNNING",
       size: [6, 7, 8, 9, 10],
-      color: ["White", "Blue", "Black"],
+      color: ["Green", "Blue", "Black"],
       price: 160,
       discountPrice: 140,
       is_in_inventory: true,
@@ -44,7 +48,7 @@ export class ProductListComponent implements OnInit {
       gender: "MEN",
       category: "RUNNING",
       size: [6, 7, 8, 9, 10],
-      color: ["White", "Blue", "Black"],
+      color: ["Green", "Blue", "Black"],
       price: 130,
       is_in_inventory: false,
       items_left: 3,
@@ -59,7 +63,7 @@ export class ProductListComponent implements OnInit {
       gender: "WOMEN",
       category: "RUNNING",
       size: [6, 7, 8, 9, 10],
-      color: ["White", "Blue", "Black", "Brown", "Red"],
+      color: ["Green", "Blue", "Black", "Brown", "Red"],
       price: 120,
       is_in_inventory: true,
       items_left: 3,
@@ -74,7 +78,7 @@ export class ProductListComponent implements OnInit {
       gender: "WOMEN",
       category: "RUNNING",
       size: [6, 7, 8, 9, 10],
-      color: ["White", , "Brown", "Red"],
+      color: ["Green", "Brown", "Red"],
       price: 180,
       discountPrice: 140,
       is_in_inventory: false,
@@ -90,7 +94,7 @@ export class ProductListComponent implements OnInit {
       gender: "WOMEN",
       category: "FOOTBALL",
       size: [6, 7, 8, 9, 10],
-      color: ["White", "Blue", "Black"],
+      color: ["Green", "Blue", "Black"],
       price: 250,
       is_in_inventory: false,
       items_left: 3,
@@ -105,7 +109,7 @@ export class ProductListComponent implements OnInit {
       gender: "WOMEN",
       category: "FOOTBALL",
       size: [6, 7, 8, 9, 10],
-      color: ["White", "Blue", "Black"],
+      color: ["Green", "Blue", "Black"],
       price: 150,
       is_in_inventory: true,
       items_left: 3,
@@ -120,7 +124,7 @@ export class ProductListComponent implements OnInit {
       gender: "WOMEN",
       category: "FOOTBALL",
       size: [6, 7, 8, 9, 10],
-      color: ["White", "Brown", "Red", "Black"],
+      color: ["Green", "Brown", "Red", "Black"],
       price: 80,
       discountPrice: 60,
       is_in_inventory: true,
@@ -136,7 +140,7 @@ export class ProductListComponent implements OnInit {
       gender: "MEN",
       category: "FOOTBALL",
       size: [6, 7, 8, 9, 10, 11, 12],
-      color: ["White", "Blue", "Black"],
+      color: ["Green", "Blue", "Black"],
       price: 145,
       discountPrice: 125,
       is_in_inventory: false,
@@ -152,7 +156,7 @@ export class ProductListComponent implements OnInit {
       gender: "MEN",
       category: "FOOTBALL",
       size: [6, 7, 8, 9, 10],
-      color: ["White", "Blue", "Black", "Brown", "Red"],
+      color: ["Green", "Blue", "Black", "Brown", "Red"],
       price: 137,
       is_in_inventory: true,
       items_left: 3,
@@ -167,7 +171,7 @@ export class ProductListComponent implements OnInit {
       gender: "KIDS",
       category: "CASUAL",
       size: [6, 7, 8, 9, 10],
-      color: ["White", "Blue", "Black"],
+      color: ["Green", "Blue", "Black"],
       price: 90,
       discountPrice: 70,
       is_in_inventory: true,
@@ -183,7 +187,7 @@ export class ProductListComponent implements OnInit {
       gender: "KIDS",
       category: "CASUAL",
       size: [6, 7, 8, 9],
-      color: ["White", "Blue", "Black"],
+      color: ["Green", "Blue", "Black"],
       price: 100,
       discountPrice: 75,
       is_in_inventory: true,
@@ -199,7 +203,7 @@ export class ProductListComponent implements OnInit {
       gender: "KIDS",
       category: "CASUAL",
       size: [6, 7, 8, 9, 10],
-      color: ["White", "Blue", "Black", "Red"],
+      color: ["Green", "Blue", "Black", "Red"],
       price: 110,
       is_in_inventory: false,
       items_left: 3,
@@ -214,7 +218,7 @@ export class ProductListComponent implements OnInit {
       gender: "KIDS",
       category: "RUNNING",
       size: [6, 7, 8, 9, 10],
-      color: ["White", "Blue", "Black"],
+      color: ["Green", "Blue", "Black"],
       price: 110,
       is_in_inventory: false,
       items_left: 3,
@@ -229,7 +233,7 @@ export class ProductListComponent implements OnInit {
       gender: "KIDS",
       category: "RUNNING",
       size: [6, 7, 8, 9, 10, 11, 12],
-      color: ["White", "Blue", "Black", "Brown", "Red"],
+      color: ["Green", "Blue", "Black", "Brown", "Red"],
       price: 80,
       discountPrice: 65,
       is_in_inventory: true,
@@ -245,7 +249,7 @@ export class ProductListComponent implements OnInit {
       gender: "KIDS",
       category: "CASUAL",
       size: [6, 7, 8],
-      color: ["White", "Blue", "Black", "Red"],
+      color: ["Green", "Blue", "Black", "Red"],
       price: 55,
       is_in_inventory: false,
       items_left: 6,
@@ -260,7 +264,7 @@ export class ProductListComponent implements OnInit {
       gender: "KIDS",
       category: "CASUAL",
       size: [6, 7, 8, 9],
-      color: ["White", "Blue", "Black", "Brown", "Red"],
+      color: ["Green", "Blue", "Black", "Brown", "Red"],
       price: 65,
       discountPrice: 45,
       is_in_inventory: true,
@@ -276,7 +280,7 @@ export class ProductListComponent implements OnInit {
       gender: "KIDS",
       category: "CASUAL",
       size: [6, 7, 8, 9, 10, 11],
-      color: ["White", "Blue", "Black"],
+      color: ["Green", "Blue", "Black"],
       price: 55,
       is_in_inventory: true,
       items_left: 3,
@@ -291,7 +295,7 @@ export class ProductListComponent implements OnInit {
       gender: "KIDS",
       category: "RUNNING",
       size: [6, 7, 8, 9, 10],
-      color: ["White", "Blue", "Black", "Brown", "Red"],
+      color: ["Green", "Blue", "Black", "Brown", "Red"],
       price: 120,
       discountPrice: 105,
       is_in_inventory: true,
@@ -307,7 +311,7 @@ export class ProductListComponent implements OnInit {
       gender: "WOMEN",
       category: "CASUAL",
       size: [6, 7, 8, 9, 10],
-      color: ["White", "Blue", "Black", "Brown"],
+      color: ["Green", "Blue", "Black", "Brown"],
       price: 140,
       is_in_inventory: true,
       items_left: 5,
@@ -322,7 +326,7 @@ export class ProductListComponent implements OnInit {
       gender: "WOMEN",
       category: "CASUAL",
       size: [6, 7, 8, 9, 10, 11, 12],
-      color: ["White", "Blue", "Black"],
+      color: ["Green", "Blue", "Black"],
       price: 90,
       discountPrice: 80,
       is_in_inventory: true,
@@ -338,7 +342,7 @@ export class ProductListComponent implements OnInit {
       gender: "MEN",
       category: "CASUAL",
       size: [6, 7, 8, 9],
-      color: ["White", "Blue", "Black", "Red"],
+      color: ["Green", "Blue", "Black", "Red"],
       price: 60,
       discountPrice: 25,
       is_in_inventory: true,
@@ -354,7 +358,7 @@ export class ProductListComponent implements OnInit {
       gender: "MEN",
       category: "CASUAL",
       size: [6, 7, 8, 9, 10, 11, 12],
-      color: ["White", "Blue", "Black", "Brown", "Red"],
+      color: ["Green", "Blue", "Black", "Brown", "Red"],
       price: 72,
       is_in_inventory: true,
       items_left: 3,
